@@ -1,9 +1,17 @@
 @font-face {
-  font-family: "kobsss";
+  font-family: "kobsss-medium";
   src: url("../assets/Fonts/Roboto-Medium.ttf");
-  src: url("../assets/Fonts/Roboto-Bold.ttf");
+}
+@font-face {
+  font-family: "kobsss-regular";
+
   src: url("../assets/Fonts/Roboto-Regular.ttf");
 }
+@font-face {
+  font-family: "kobsss-bold";
 
-$primary: rgb(235, 214, 56);
-$font: "kobsss";
+  src: url("../assets/Fonts/Roboto-Bold.ttf");
+}
+
+$primary: rgb(242, 201, 17);
+$font: "kobsss-regular";
