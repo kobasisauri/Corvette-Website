@@ -1,7 +1,13 @@
-import "./App.css";
+import Home from "./features/Home";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="app">
+      <div className="wrapper">
+        <Home />
+      </div>
+    </div>
+  );
 }
 
 export default App;
