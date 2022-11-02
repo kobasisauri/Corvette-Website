@@ -4,6 +4,7 @@ import SideBar from "../../components/UI/SideBar";
 import SideComponent from "../../components/SideComponent";
 import LockSpin from "../../components/UI/LockSpin";
 import car from "../../assets/corvette1.png";
+import carlight from "../../assets/Corvettelight.png";
 
 import { ReactComponent as Lock } from "../../assets/lock.svg";
 import { ReactComponent as LeftArrow } from "../../assets/arrow-left.svg";
@@ -42,11 +43,11 @@ function Home() {
 
       <div className={`${!display ? styled.container : ""}`}>
         {!display && <SideComponent active={active} />}
-        <img
-          className={`${styled.car} ${active ? styled["active-car"] : ""}`}
-          src={car}
-          alt="car"
-        />
+        {display ? (
+          <img className={`${styled.car} }`} src={car} alt="car" />
+        ) : (
+          <img className={`${styled.car2} `} src={carlight} alt="car" />
+        )}
       </div>
       {display && <SideBar active={active} />}
 
