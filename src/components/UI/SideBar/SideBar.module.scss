@@ -1,0 +1,53 @@
+.sidebar {
+  width: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: -30px;
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  animation: 3s slideInFromLeft;
+
+  .wrapper {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    .item {
+      color: #fff;
+      writing-mode: vertical-rl;
+      transform: scale(-1);
+      cursor: pointer;
+      font-family: "kobsss-mediume";
+      font-size: 14px;
+      color: rgb(204, 204, 204);
+      width: 15px;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+.active-sidebar {
+  transform: translateX(-200px);
+  @keyframes slideRemove {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-200px);
+    }
+  }
+  animation: 3s slideRemove;
+}
