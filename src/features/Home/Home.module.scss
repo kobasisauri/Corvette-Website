@@ -1,0 +1,131 @@
+.name {
+  margin-top: 90px;
+  margin-left: 44px;
+  color: #fff;
+  font-family: "kobsss-bold";
+  font-size: 64px;
+  text-align: center;
+  letter-spacing: 88px;
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateY(-400%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  animation: 3s slideInFromLeft;
+}
+.container {
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+  .car {
+    margin-right: 15%;
+    margin-top: 13%;
+  }
+}
+
+.car {
+  float: right;
+  width: 450px;
+  margin-top: 2%;
+  margin-right: 15%;
+  animation: 3s car;
+}
+
+.icons-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  animation: 3s icons;
+}
+
+.icon-border {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 50%;
+  &:hover svg {
+    fill: #fff;
+  }
+  &:hover {
+    border-color: #fff;
+  }
+}
+.icon {
+  width: 32px;
+  height: 32px;
+  fill: rgb(204, 204, 204);
+  padding: 5px;
+}
+@keyframes car {
+  0% {
+    transform: translateY(-70px);
+    opacity: 0;
+    scale: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes icons {
+  0% {
+    transform: translateY(300%) translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) translateX(-50%);
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .name {
+    font-size: 48px;
+    letter-spacing: 60px;
+  }
+  .car {
+    margin-right: 5%;
+    width: 400px;
+  }
+}
+
+.active-name {
+  animation: 3s removeName;
+  transform: translateY(-400px);
+}
+
+.active-car {
+  transform: translateY(20px);
+}
+.active-icons {
+  transform: translateY(200px);
+  animation: 3s removeicon;
+}
+
+@keyframes removeName {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-400px);
+  }
+}
+@keyframes removeicon {
+  0% {
+    transform: translateY(0) translateX(-50%);
+    // opacity: 1;
+  }
+
+  100% {
+    transform: translateY(200px) translateX(-50%);
+  }
+}

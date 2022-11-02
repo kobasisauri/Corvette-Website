@@ -1,0 +1,55 @@
+@import "../../styles/variable.scss";
+.wrapper {
+  //   display: flex;
+  animation: 3s slideInFromLeft;
+}
+.heading1 {
+  font-size: 84px;
+  color: $primary;
+  margin-bottom: 20px;
+  word-spacing: 10px;
+  letter-spacing: 8px;
+}
+
+.heading2 {
+  font-size: 48px;
+  color: white;
+  margin-bottom: 50px;
+}
+.icons-wrapper {
+  width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+.inner-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  .icon {
+    top: 0;
+    left: 0;
+    margin-bottom: 30px;
+  }
+
+  .num {
+    font-size: 48px;
+    margin-bottom: 15px;
+  }
+  .info {
+    font-size: 16px;
+    color: rgb(204, 204, 204);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateY(700px);
+    // opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
