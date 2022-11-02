@@ -1,0 +1,74 @@
+@import "../../../styles/variable.scss";
+
+.wrapper {
+  position: relative;
+  left: 20%;
+  top: 250px;
+  width: 180px;
+
+  svg {
+    position: absolute;
+    left: 90px;
+    top: 48%;
+    transform: translateY(-50%) translateX(-50%);
+    fill: #fff;
+    animation: 3s opacity;
+    width: 48px;
+  }
+
+  &.active-wrapper {
+    animation: 3s remove;
+    left: 0;
+  }
+}
+
+.loader {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  background: conic-gradient(#0000 10%, $primary);
+  border-radius: 50%;
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 15px), #000 0);
+  animation: 3s slideInFromLeft, animate 4s infinite linear;
+}
+
+@keyframes remove {
+  0% {
+    left: 20%;
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-700px);
+  }
+}
+
+@keyframes animate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateY(700px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  100% {
+    left: 50%;
+    top: 90px;
+    opacity: 1;
+
+    transform: translateY(-50%) translateX(-50%);
+  }
+  0% {
+    opacity: 0;
+    transform: translateY(700px);
+  }
+}
